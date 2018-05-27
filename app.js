@@ -12,6 +12,9 @@ const   express                 = require('express'),
         port                    = process.env.PORT,
         dbURL                   = process.env.DBURL;
 
+const indexRoutes = require('./routes/index.js');
+const userRoutes = require('./routes/user.js');
+
 mongoose.connect(dbURL)
 .then((connection)=>{console.log('Connected to DB')})
 .catch((err)=>{
@@ -23,9 +26,7 @@ app.use(express.static(path.join(__dirname + '/public')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 
-app.get('/', (req, res)=>{
-    res.render('index', {title: "Homepage"});
-});
+app.use(indexRoutes);
 
 app.listen(port, (req, res)=> console.log(`Server is running on ${port}`));
 
