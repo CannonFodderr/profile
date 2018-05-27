@@ -24,8 +24,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 
 app.get('/', (req, res)=>{
-    console.log('home');
-    res.send('This will be the homepage');
+    res.render('index', {title: "Homepage"});
 });
 
 app.listen(port, (req, res)=> console.log(`Server is running on ${port}`));
