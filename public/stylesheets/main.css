@@ -1,10 +1,12 @@
 :root {
     --link: steelblue;
+    --textBG: #232323;
+    --bgColor1: #232323;
 }
 
 body{
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
     top: 0;
     opacity: 0;
     height: 100vh;
@@ -12,12 +14,12 @@ body{
     margin: 0;
     padding: 0;
     color: #fff;
-    background-color: #232323;
+    background-color: var(--bgColor1);
+    font-family: 'Roboto', sans-serif;
 }
-.bgimg{
-    position: relative;
-    width: 100%;
-    height: 100%;
+a{
+    color: #fff;
+    text-decoration: none;
 }
 #bg{
     position: absolute;
@@ -34,26 +36,50 @@ body{
     height: 100vh;
     width: 25vw;
     z-index: -99;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid var(--textBG);
     transform: skew(-20deg);
-    
+    background-image: url('../images/bg/me.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.strip h3 {
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    top: 50vh;
+    padding: 10px;
+    border: 2px dashed var(--textBG);
+    background-color: var(--textBG);
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+    -webkit-box-shadow: 4px 7px 50px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 7px 50px 3px rgba(0,0,0,0.75);
+    box-shadow: 4px 7px 50px 3px rgba(0,0,0,0.75);
+}
+.strip h3:hover{
+    border-color: #fff;
 }
 .strip:nth-of-type(1){
-    left: 25vw;
-    background-image: url('./images/bg/dev.jpg');
+    left: 25vw; 
+    background-color: var(--bgColor1);
+    background-image: url('../images/bg/eCommerce.jpg');
     background-size: cover;
     z-index: 98;
 }
 .strip:nth-of-type(2){
     left: 50vw;
-    background-image: url('images/bg/dev.jpg');
+    background-image: url('../images/bg/devbg.jpg');
     background-size: cover;
 }
 .strip:nth-of-type(3){
     left: 75vw;
+    background-color: var(--bgColor1);
+    background-image: url('../images/bg/beta.png');
+    background-position: center;
 }
 .linkbtn{
-    color: var(--link);
-    text-decoration: underline;
+    /* color: var(--link); */
+    /* text-decoration: underline; */
     cursor: pointer;
 }

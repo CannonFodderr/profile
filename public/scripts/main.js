@@ -23,7 +23,10 @@ fadeOut = (element) => {
         setTimeout(()=>{
             element.style.opacity = opOut;
             fadeOut(element)
-        }, 5)    
+        }, 5)
+        setTimeout(()=>{
+            window.location.href = anchor.href;
+        }, 500)    
     } else {    
         return opOut = 1
     };
@@ -36,8 +39,6 @@ fadeIn(body[0]);
 for (let anchor of anchors){
     anchor.addEventListener('click', ()=>{
         fadeOut(body[0]);
-        setTimeout(()=>{
-            window.location.href = anchor.id;
-        }, 500)
+        
     });
 }
