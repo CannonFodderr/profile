@@ -41,9 +41,11 @@ a{
     background-image: url('../images/bg/me.jpg');
     background-size: cover;
     background-position: center;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.2s;
 }
-
+.strip:hover{
+    filter: hue-rotate(90deg);
+}
 .strip h3 {
     position: relative;
     width: max-content;
@@ -57,6 +59,8 @@ a{
     -webkit-box-shadow: 4px 7px 50px 3px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 7px 50px 3px rgba(0,0,0,0.75);
     box-shadow: 4px 7px 50px 3px rgba(0,0,0,0.75);
+    text-align: center;
+    transition: ease-in-out 0.8s;
 }
 .strip h3:hover{
     border-color: #fff;
@@ -76,7 +80,7 @@ a{
 .strip:nth-of-type(3){
     left: 75vw;
     background-color: var(--bgColor1);
-    background-image: url('../images/bg/beta.png');
+    background-image: url('../images/bg/sound.jpg');
     background-position: center;
     width: 34vw;
 }
