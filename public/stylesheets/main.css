@@ -41,6 +41,7 @@ a{
     background-image: url('../images/bg/me.jpg');
     background-size: cover;
     background-position: center;
+    transition: ease-in-out 0.5s;
 }
 
 .strip h3 {
@@ -77,6 +78,12 @@ a{
     background-color: var(--bgColor1);
     background-image: url('../images/bg/beta.png');
     background-position: center;
+    width: 34vw;
+}
+.strip:nth-of-type(4){
+    transform: skew(0deg);
+    width: 30vw;
+    background-position: left;
 }
 .linkbtn{
     /* color: var(--link); */
